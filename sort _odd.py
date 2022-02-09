@@ -7,4 +7,8 @@ def sort_odd(l):
             odds.insert(index, item)
     return odds
 
-print(sort_odd([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]))
+#Codewars best practices
+
+def sort_array(arr):
+  odds = sorted((x for x in arr if x%2 != 0), reverse=True)
+  return [x if x%2==0 else odds.pop() for x in arr]
